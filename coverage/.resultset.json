@@ -1,7 +1,34 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Desktop/Makers/Challenges_pairing/Bookmark_manager/spec/features/index_page_spec.rb": {
+      "/Users/nikita/Developer/Projects/FullCourse/Week4/Bookmark-manager/spec/bookmarkslist_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nikita/Developer/Projects/FullCourse/Week4/Bookmark-manager/lib/bookmarkmanager.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nikita/Developer/Projects/FullCourse/Week4/Bookmark-manager/spec/features/bookmarks_list_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nikita/Developer/Projects/FullCourse/Week4/Bookmark-manager/spec/features/index_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -12,6 +39,6 @@
         ]
       }
     },
-    "timestamp": 1591021655
+    "timestamp": 1591023630
   }
 }
