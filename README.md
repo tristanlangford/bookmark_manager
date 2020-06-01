@@ -41,3 +41,6 @@ As a developer,
 so that users can access and modify only their own bookmarks
 I would like to restrict their access only to their personal bookmarks
 ```
+# Domain Model Diagram
+
+![bookmark_diagram](https://github.com/BeneArinci/Bookmark-manager/blob/master/Screenshot%202020-06-01%20at%2014.48.13.png) 
