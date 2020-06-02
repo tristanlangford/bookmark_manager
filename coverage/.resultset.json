@@ -7,14 +7,11 @@
           null,
           1,
           null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/nikita/Developer/Projects/FullCourse/Week4/Bookmark-manager/lib/bookmark_list.rb": {
-        "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -41,6 +38,6 @@
         ]
       }
     },
-    "timestamp": 1591102403
+    "timestamp": 1591104618
   }
 }

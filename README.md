@@ -43,4 +43,11 @@ I would like to restrict their access only to their personal bookmarks
 ```
 # Domain Model Diagram
 
-![bookmark_diagram](https://github.com/BeneArinci/Bookmark-manager/blob/master/Screenshot%202020-06-01%20at%2014.48.13.png) 
+![bookmark_diagram](https://github.com/BeneArinci/Bookmark-manager/blob/master/Screenshot%202020-06-01%20at%2014.48.13.png)
+
+# How to Setup Your Database
+
+1. Connect to psql
+2. Create the database using the psql command CREATE DATABASE bookmark_manager;
+3. Connect to the database using the pqsl command \c bookmark_manager;
+4. Run the query we have saved in the file 01_create_bookmarks_table.sql
