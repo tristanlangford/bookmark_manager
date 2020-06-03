@@ -3,8 +3,6 @@ require 'database_helper'
 
 describe BookmarkList do
 
-
-describe '#show_list' do
   it 'displays a list of bookmarks' do
     connection = PG.connect(dbname: 'bookmark_manager_test')
 
@@ -18,6 +16,10 @@ describe '#show_list' do
     expect(bookmarks).to include "www.bbc.co.uk"
     expect(bookmarks).to include "www.gmail.com"
   end
-end
+
+  it 'add a bookmark' do
+    BookmarkList.add("www.google.com")
+    expect(BookmarkList.show_list).to include("www.google.com")
+  end
 
 end

@@ -3,6 +3,8 @@ require_relative 'lib/bookmark_list'
 
 class BookmarkManager < Sinatra::Base
   get '/' do
+    p ENV['ENVIRONMENT']
+    p ENV['RACK_ENV']
     'Bookmark Manager'
   end
 

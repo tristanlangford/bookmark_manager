@@ -1,15 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Student/Desktop/Tristan_Makers/week4/day2/bookmark_manager/spec/bookmark_list_spec.rb": {
+      "/Users/Student/Desktop/Tristan_Makers/week4/day3/bookmark_manager/spec/bookmark_list_spec.rb": {
         "lines": [
           1,
           1,
           null,
           1,
           null,
-          null,
-          1,
           1,
           1,
           null,
@@ -23,12 +21,16 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          0,
           null,
           null,
           null
         ]
       },
-      "/Users/Student/Desktop/Tristan_Makers/week4/day2/bookmark_manager/spec/features/bookmarks_page_spec.rb": {
+      "/Users/Student/Desktop/Tristan_Makers/week4/day3/bookmark_manager/spec/features/bookmarks_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -42,10 +44,15 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
-      "/Users/Student/Desktop/Tristan_Makers/week4/day2/bookmark_manager/spec/features/index_page_spec.rb": {
+      "/Users/Student/Desktop/Tristan_Makers/week4/day3/bookmark_manager/spec/features/index_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -56,6 +63,6 @@
         ]
       }
     },
-    "timestamp": 1591115623
+    "timestamp": 1591192630
   }
 }
