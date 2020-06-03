@@ -3,8 +3,6 @@ require_relative 'lib/bookmark_list'
 
 class BookmarkManager < Sinatra::Base
   get '/' do
-    p ENV['ENVIRONMENT']
-    p ENV['RACK_ENV']
     'Bookmark Manager'
   end
 
@@ -14,7 +12,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/add_new' do
-    BookmarkList.add(params[:url])
+    BookmarkList.add(params[:url], params[:title])
   end
 
 end

@@ -3,33 +3,30 @@ require 'pg'
 class BookmarkList
 
   def self.show_list
-    if ENV['RACK_ENV'] == 'test'
+    con = choose_database
 
-      con = PG.connect :dbname => 'bookmark_manager_test'
+    rs = con.exec "SELECT * FROM bookmarks"
 
-    else
-
-      con = PG.connect :dbname => 'bookmark_manager'
-
+    rs.map { |bookmark| bookmark['title'] }
     end
 
-    rs = con.exec "SELECT url FROM bookmarks"
+    def self.add(url, title)
+      con = choose_database
 
-    rs.map { |bookmark| bookmark['url'] }
+      rs = con.exec "INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}')"
     end
 
-    def self.add(url)
+
+    def self.choose_database
       if ENV['RACK_ENV'] == 'test'
 
-        con = PG.connect :dbname => 'bookmark_manager_test'
+        PG.connect :dbname => 'bookmark_manager_test'
 
       else
 
-        con = PG.connect :dbname => 'bookmark_manager'
+        PG.connect :dbname => 'bookmark_manager'
 
       end
-
-      rs = con.exec "INSERT INTO bookmarks (url) VALUES ('#{url}')"
     end
 
 end
