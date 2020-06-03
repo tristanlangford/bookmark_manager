@@ -18,7 +18,7 @@ describe BookmarkList do
   end
 
   it 'add a bookmark' do
-    BookmarkList.add("www.google.com")
+    BookmarkList.add('www.google.com')
     expect(BookmarkList.show_list).to include("www.google.com")
   end
 

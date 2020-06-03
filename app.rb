@@ -12,4 +12,9 @@ class BookmarkManager < Sinatra::Base
     @bookmarks = BookmarkList.show_list
     erb(:bookmarks)
   end
+
+  post '/add_new' do
+    BookmarkList.add(params[:url])
+  end
+
 end
