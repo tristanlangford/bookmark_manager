@@ -22,4 +22,17 @@ describe BookmarkList do
     expect(BookmarkList.show_list).to include("google")
   end
 
+  it 'instances hold table information' do
+  connection = PG.connect(dbname: 'bookmark_manager_test')
+
+  connection.exec("INSERT INTO bookmarks VALUES(1, 'www.github.com', 'Github');")
+  connection.exec("INSERT INTO bookmarks VALUES(2, 'www.bbc.co.uk', 'BBC');")
+  connection.exec("INSERT INTO bookmarks VALUES(3, 'www.gmail.com', 'Gmail');")
+
+  instance_array = BookmarkList.show_list
+
+  expect(instance_array[0].title).to eq "Gihub"
+ end
+
+
 end

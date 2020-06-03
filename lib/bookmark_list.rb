@@ -2,6 +2,14 @@ require 'pg'
 
 class BookmarkList
 
+  attr_reader :id, :url, :title
+
+  def initialise (id, url, title)
+    @id = id
+    @url = url
+    @title = title
+  end
+
   def self.show_list
     con = choose_database
 
