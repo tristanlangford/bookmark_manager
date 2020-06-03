@@ -4,7 +4,7 @@ class BookmarkList
 
   attr_reader :id, :url, :title
 
-  def initialise (id, url, title)
+  def initialize (id, url, title)
     @id = id
     @url = url
     @title = title
@@ -15,7 +15,7 @@ class BookmarkList
 
     rs = con.exec "SELECT * FROM bookmarks"
 
-    rs.map { |bookmark| bookmark['title'] }
+    rs.map { |bookmark| BookmarkList.new(bookmark['id'], bookmark['url'], bookmark['title'])  }
     end
 
     def self.add(url, title)

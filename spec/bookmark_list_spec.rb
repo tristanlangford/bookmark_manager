@@ -12,14 +12,14 @@ describe BookmarkList do
     connection.exec("INSERT INTO bookmarks VALUES(3, 'www.gmail.com', 'Gmail');")
 
     bookmarks = BookmarkList.show_list
-    expect(bookmarks).to include "Github"
-    expect(bookmarks).to include "BBC"
-    expect(bookmarks).to include "Gmail"
+    expect(bookmarks.first.id).to eq('1')
+    expect(bookmarks.first.url).to eq('www.github.com')
+    expect(bookmarks.first.title).to eq('Github')
   end
 
   it 'add a bookmark' do
     BookmarkList.add('www.google.com', "google")
-    expect(BookmarkList.show_list).to include("google")
+    expect(BookmarkList.show_list.last.title).to eq("google")
   end
 
   it 'instances hold table information' do
@@ -31,7 +31,7 @@ describe BookmarkList do
 
   instance_array = BookmarkList.show_list
 
-  expect(instance_array[0].title).to eq "Gihub"
+  expect(instance_array[0].title).to eq "Github"
  end
 
 
